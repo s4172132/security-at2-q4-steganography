@@ -1,0 +1,12 @@
+from cryptography.fernet import fernet
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.
+import os
+
+
+#This code was developed from the base code ()
+BASE=os.path.dirname(os.path.abspath(__file__))
+
+
+def encrypt_file(input_file_path, output_file_path, password):
+    salt = os.urandom(16)
